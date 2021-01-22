@@ -1,0 +1,19 @@
+{
+  "name": "myserver",
+  "version": "1.0.0",
+  "description": "My Simple server",
+  "main": "server,js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Simple",
+    "server"
+  ],
+  "author": "Shilpa P",
+  "license": "ISC",
+  "dependencies": {
+    "express": "*",
+    "body-parser": ""
+  }
+}
