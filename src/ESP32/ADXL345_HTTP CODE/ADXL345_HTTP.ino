@@ -10,15 +10,12 @@ WiFiMulti wifiMulti;
 #define LED_BUILTIN 2   // Set the GPIO pin where you connected your test LED or comment this line out if your dev board has a built-in LED
 
 // Set these to your desired credentials.
-//const char* ssid     = "AndroidAP6712";
-//const char* password = "mfee5283";
-//const char* ssid     = "TP-LINK_DA271C";
-//const char* password = "abhinav301295";
-const char* ssid     = "WIFI30";
-const char* password = "YT93FraBjdFdpfcR";
+
+const char* ssid     = "........";
+const char* password = "..............";
 //String SERVER_IP     = "http://192.168.43.21:8000";
 //String SERVER_IP     = "http://192.168.2.105:8000";
-String SERVER_IP     = "http://192.168.0.169:8000";
+String SERVER_IP     = "http://192.168.0.169:PORT NUMBER";
  
 String GET_PING      = "/ping";
 String POST_SENSOR   = "/ingest";
@@ -120,9 +117,6 @@ void postSensorData(){
   Serial.print("[HTTP] POST...\n");
        
   http.addHeader("Content-Type", "application/json");
-
-//String jsonPayload = "{\"sensorId\":\"Acc_Sensor\",\"sensor\":\"ADXL345\",\"X Coordinate\":\"24.25\",\"Y Coordinate\":\"49.54\",\"Z Coordinate\":\"49.54\"}";
-//
 
 
  sprintf(json_string,"{\"SensorId\":\"Acc_Sensor\",\"data\": {\"XCoordinate\":%.02f,\"YCoordinate\":%.02f,\"ZCoordinate\":%.02f}}",X,Y,Z);
